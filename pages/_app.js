@@ -1,7 +1,14 @@
+import Head from 'next/head'
+import { MoralisProvider } from 'react-moralis'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+  <MoralisProvider appId="3mHcsvyxDwdfCMB4CPLcAlwH6yK5GJawCHWXohLo" serverUrl="https://ozfkhm46rwfw.usemoralis.com:2053/server">
+    <Component {...pageProps} />
+  </MoralisProvider>
+
+  )
 }
 
 export default MyApp
