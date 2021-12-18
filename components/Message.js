@@ -12,7 +12,7 @@ export default function Message({ message }) {
         <Avatar username={message.get("username")} />
       </div>
 
-      <div className={`text-gray-100 flex space-x-4 p-3 rounded-lg font-bold ${isUserMessage ? "rounded-br-none bg-green-300" : "rounded-bl-none bg-blue-300"}`}>
+      <div className={` flex space-x-4 p-3 rounded-lg ${isUserMessage ? "rounded-br-none bg-blue-300" : "rounded-bl-none bg-pink-300"}`}>
         <p>{message.get("message")}</p>
       </div>
 
@@ -21,7 +21,7 @@ export default function Message({ message }) {
         datetime={message.createdAt}
       />
 
-      <p className={`absolute -bottom-5 text-xs ${isUserMessage ? "text-pink-300" : "text-blue-400"}`}>
+      <p className={`absolute -bottom-5 text-xs ${isUserMessage ? "text-blue-300" : "text-pink-400"}`}>
         {message.get("username")}
       </p>
     </div>

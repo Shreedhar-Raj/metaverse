@@ -16,7 +16,7 @@ function ChangeUsername() {
 
     return (
         <div className="text-sm absolute top-5 right-5">
-            <button onClick={setUsername} className="bg-pink-500 rounded-lg p-2 font-bold hover:bg-pink-400">Change My Username</button>
+            <button onClick={setUsername} className="bg-sky-500 rounded-lg p-2 font-bold hover:bg-pink-400">Change My Username</button>
         </div>
     )
 }
