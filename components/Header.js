@@ -2,24 +2,27 @@ import Image from "next/image";
 import { useMoralis } from "react-moralis"
 import Avatar from "./Avatar";
 import ChangeUsername from "./ChangeUsername";
+import { LoginIcon, LogoutIcon } from "@heroicons/react/outline"
 
 function Header() {
 
-    const { user } = useMoralis();
+    const { user, logout } = useMoralis();
 
     return (
         <div className="sticky top-0 p-5 z-50 shadow-sm border-b-2 border-pink-700 bg-black">
             <div className="gird gird-cols-5 lg:grid-cols-6 items-end lg:items-center">
-                <div className="relative h-24 w-24 mx-auto hidden lg:inline-grid col-span-4">
-                    <Image className="rounded-full" layout="fill" src="https://links.papareact.com/3pi" />
+                <div className="flex max-w-[7%] rounded-lg p-1 bg-pink-500 rounded-lg overflow-hidden font-bold hover:bg-pink-400 col-span-4">
+                <LoginIcon className="h-7 w-7 mr-1" />
+                <button onClick={logout} className="">Logout</button>
                 </div>
 
                 <div className="text-left lg:text-center">
                     <div className=" h-48 w-48 relative mx-auto border-pink-500 border-8 rounded-full">
+                        
                         <Avatar logOutOnPress />
                     </div>
 
-                    <h1 className="text-3xl text-pink-500">Welcome to the Dev Hub METAVERSE</h1>
+                    <h1 className="text-3xl text-pink-500">Welcome to the PAPAFAM METAVERSE</h1>
 
                     <h2 className="text-5xl font-bold tuncate text-pink-500">{user.getUsername()}</h2>
 
